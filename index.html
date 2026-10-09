@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tur Palapa · Jelajah Jawa Timur</title>
+<meta name="description" content="Lima destinasi pilihan di Jawa Timur: Gunung Bromo, Kawah Ijen, Tumpak Sewu, Pantai Papuma, dan Pulau Sempu.">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&amp;family=Poppins:wght@300;400;500;600&amp;family=Baloo+2:wght@600;700&amp;display=swap">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2216%22 fill=%22%23171717%22/%3E%3Cg fill=%22none%22 stroke=%22white%22 stroke-width=%223.4%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 transform=%22translate(8 5) scale(2)%22%3E%3Cpath d=%22M12.2 21V8.4C12.2 6.5 13.4 5.4 15.9 5.4%22/%3E%3Cpath d=%22M5.6 10.2H16.6%22/%3E%3Cpath d=%22M15.9 5.4L13.5 3.4M15.9 5.4L13.5 7.4%22/%3E%3C/g%3E%3Ccircle cx=%2212.2%22 cy=%2221%22 r=%222.4%22 fill=%22white%22 transform=%22translate(8 5) scale(2)%22/%3E%3C/svg%3E">
+</head>
+<body class="bg-neutral-950 [font-family:Poppins,sans-serif] antialiased">
+<main>
+
+  <!-- Navigasi. Pill mengambang fixed: kaca navbar + menu tengah + CTA solid. -->
+  <header data-ui="navbar" class="fixed inset-x-0 top-0 z-50 px-[12px] pt-[12px]">
+    <div class="mx-auto flex w-full max-w-[1240px] items-center justify-between gap-x-[18px] rounded-full border border-white/15 bg-white/10 py-[10px] pl-[24px] pr-[10px] backdrop-blur-[12px]">
+      <a href="#beranda" class="flex items-center gap-x-[10px] rounded text-white focus-visible:ring-2 focus-visible:ring-white">
+        <svg viewBox="0 0 24 24" class="size-[26px]" aria-hidden="true" focusable="false">
+          <g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12.2 21V8.4C12.2 6.5 13.4 5.4 15.9 5.4"/>
+            <path d="M5.6 10.2H16.6"/>
+            <path d="M15.9 5.4L13.5 3.4M15.9 5.4L13.5 7.4"/>
+          </g>
+          <circle cx="12.2" cy="21" r="2.4" fill="currentColor"/>
+        </svg>
+        <span class="text-[19px] font-semibold [font-family:'Baloo_2',sans-serif]">Tur Palapa</span>
+      </a>
+      <nav aria-label="Navigasi utama" class="hidden items-center gap-x-[20px] text-[13px] sm:flex lg:gap-x-[30px] lg:text-[15px]">
+        <a href="#beranda" class="rounded text-white/80 transition-colors hover:text-white focus-visible:ring-2 focus-visible:ring-white aria-[current=page]:font-medium aria-[current=page]:text-white">Beranda</a>
+        <a href="#destinasi" class="rounded text-white/80 transition-colors hover:text-white focus-visible:ring-2 focus-visible:ring-white aria-[current=page]:font-medium aria-[current=page]:text-white">Destinasi</a>
+        <a href="#paket" class="rounded text-white/80 transition-colors hover:text-white focus-visible:ring-2 focus-visible:ring-white aria-[current=page]:font-medium aria-[current=page]:text-white">Paket Wisata</a>
+        <a href="#tentang" class="rounded text-white/80 transition-colors hover:text-white focus-visible:ring-2 focus-visible:ring-white aria-[current=page]:font-medium aria-[current=page]:text-white">Tentang Kami</a>
+        <a href="#kontak" class="rounded text-white/80 transition-colors hover:text-white focus-visible:ring-2 focus-visible:ring-white aria-[current=page]:font-medium aria-[current=page]:text-white">Kontak</a>
+      </nav>
+      <a href="#destinasi" class="inline-flex shrink-0 items-center gap-x-[9px] rounded-full bg-neutral-950 py-[12px] pl-[24px] pr-[20px] text-[14px] leading-[18px] font-medium text-white transition-colors hover:bg-neutral-800 focus-visible:ring-2 focus-visible:ring-white">
+        Mulai Jelajah
+        <svg viewBox="0 0 24 24" class="size-[14px]" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8"/></svg>
+      </a>
+    </div>
+  </header>
+
+<section id="beranda" aria-label="Sisi Liar Jawa Timur" class="relative isolate h-[523px] min-h-[100svh] overflow-hidden lg:h-screen lg:min-h-[600px]">
+
+  <!-- Latar: Ranu Kumbolo, Semeru (Wikimedia Commons, CC BY-SA) -->
+  <img id="hero-bg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Sunrise_Ranu_Kumbolo_semeru.jpg/1920px-Sunrise_Ranu_Kumbolo_semeru.jpg" alt="" class="absolute inset-0 -z-20 h-full w-full object-cover saturate-[0.8] transition-opacity duration-500">
+  <div class="absolute inset-0 -z-10 bg-gradient-to-r from-black/60 via-black/25 to-black/5"></div>
+  <div class="absolute inset-0 -z-10 bg-gradient-to-t from-black/35 via-black/5 to-black/30"></div>
+
+  <!-- Konten kiri -->
+  <div data-ui="hero-copy" aria-live="polite" class="absolute bottom-[31%] left-[29px] z-10 w-[368px] max-w-[calc(100%-58px)] sm:left-[52px] lg:w-[608px] lg:max-w-[calc(100%-460px)]">
+    <div data-ui="badge" class="inline-flex items-center gap-x-[10px] rounded-full border border-white/25 bg-black/30 py-[5px] pl-[5px] pr-[18px] backdrop-blur-[3px]">
+      <span class="rounded-full bg-neutral-950 px-[14px] py-[8px] text-[14px] font-medium text-white">Baru</span>
+      <span class="text-[15px] text-white/95">Jelajah Jawa Timur</span>
+    </div>
+    <h1 id="hero-title" class="mt-[14px] text-[28px] font-medium italic leading-[1.12] text-white transition-opacity duration-300 sm:mt-[18px] sm:text-[42px] sm:leading-[1.08] [font-family:'Playfair_Display',serif]">Sisi Liar Jawa Timur</h1>
+    <p id="hero-desc" class="mt-[10px] text-[14px] leading-[22px] text-white/95 transition-opacity duration-300 sm:mt-[14px] sm:text-[17px] sm:leading-[27px]">Dari kabut Bromo sampai api biru Ijen, lima destinasi ini mewakili sisi paling keras dan paling tenang Jawa Timur. Pilih yang paling pas dengan tempo liburanmu.</p>
+    <a href="#destinasi" class="mt-[14px] inline-flex items-center gap-x-[10px] rounded-full border border-white/20 bg-white/15 py-[12px] pl-[26px] pr-[22px] text-[15px] leading-[20px] font-medium text-white backdrop-blur-[3px] transition-colors hover:bg-white/25 focus-visible:ring-2 focus-visible:ring-white">
+      Lihat 5 Destinasi
+      <svg viewBox="0 0 24 24" class="size-[15px]" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        <path d="M7 17 17 7M9 7h8v8"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- Kluster destinasi. Foto: Wikimedia Commons (Bromo: Gunung Bromo sunrise; Ijen: Kawah Ijen acid lake; Tumpak Sewu: waterfall; Papuma: aerial bay; Sempu: Sempu Island), lisensi CC BY / CC BY-SA -->
+  <div data-ui="destination-stack" aria-label="Lima destinasi pilihan" class="absolute right-0 top-[53.5%] z-10 hidden h-[85svh] w-[320px] -translate-y-1/2 sm:block">
+    <ul class="h-full w-full">
+      <li data-item role="button" tabindex="0" data-active="false" aria-pressed="false" data-bg="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Gunung_Bromo_sunrise_-_Indonesia.jpg/1920px-Gunung_Bromo_sunrise_-_Indonesia.jpg" data-title="Lautan Pasir Bromo" data-desc="Berangkat sebelum subuh ke Penanjakan untuk menyaksikan matahari terbit di atas lautan pasir, lalu turun menyusuri kawah aktif yang masih berasap." class="group absolute left-[11px] top-[1svh] size-[14.25svh] cursor-pointer rounded-full focus-visible:ring-2 focus-visible:ring-white">
+        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Gunung_Bromo_sunrise_-_Indonesia.jpg/960px-Gunung_Bromo_sunrise_-_Indonesia.jpg" alt="Kabut pagi di Gunung Bromo, Probolinggo" class="size-full rounded-full object-cover transition-[transform,box-shadow] duration-300 group-hover:scale-105 group-data-[active=true]:ring-2 group-data-[active=true]:ring-white/70 group-data-[active=true]:shadow-[0_0_28px_rgba(255,255,255,0.22),0_10px_18px_rgba(0,0,0,0.45)]">
+        <span class="absolute right-[calc(100%+9px)] top-1/2 w-max -translate-y-1/2 rounded-2xl border border-white/0 bg-white/0 px-[12px] py-[7px] text-left transition-colors duration-300 group-data-[active=true]:border-white/25 group-data-[active=true]:bg-black/35 group-data-[active=true]:backdrop-blur-[2px]">
+          <span class="flex items-center gap-x-[7px]">
+            <svg viewBox="0 0 24 24" class="size-[15px] shrink-0 text-white opacity-0 scale-75 transition-all duration-200 group-data-[active=true]:opacity-100 group-data-[active=true]:scale-100" fill="none" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="block text-[17px] italic text-white/90 transition-colors duration-300 group-data-[active=true]:text-white [font-family:'Playfair_Display',serif]">Gunung Bromo</span>
+          </span>
+          <span class="mt-[3px] block text-[14px] text-white/70 transition-colors duration-300 group-data-[active=true]:text-white/90">Probolinggo, Jawa Timur</span>
+        </span>
+      </li>
+      <li data-item role="button" tabindex="0" data-active="false" aria-pressed="false" data-bg="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Kawah-Ijen_Indonesia_Acidious-Lake-at_the-floor-of-the-crater-01.jpg/1920px-Kawah-Ijen_Indonesia_Acidious-Lake-at_the-floor-of-the-crater-01.jpg" data-title="Api Biru Kawah Ijen" data-desc="Naik puncak Ijen tengah malam untuk menyaksikan api biru yang langka, lalu berdiri di tepi danau kawah asam terbesar di dunia yang berwarna tosaca menyala." class="group absolute left-[92px] top-[16.9svh] size-[14.5svh] cursor-pointer rounded-full focus-visible:ring-2 focus-visible:ring-white">
+        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Kawah-Ijen_Indonesia_Acidious-Lake-at_the-floor-of-the-crater-01.jpg/960px-Kawah-Ijen_Indonesia_Acidious-Lake-at_the-floor-of-the-crater-01.jpg" alt="Danau kawah Kawah Ijen, Banyuwangi" class="size-full rounded-full object-cover transition-[transform,box-shadow] duration-300 group-hover:scale-105 group-data-[active=true]:ring-2 group-data-[active=true]:ring-white/70 group-data-[active=true]:shadow-[0_0_28px_rgba(255,255,255,0.22),0_10px_18px_rgba(0,0,0,0.45)]">
+        <span class="absolute right-[calc(100%+9px)] top-1/2 w-max -translate-y-1/2 rounded-2xl border border-white/0 bg-white/0 px-[12px] py-[7px] text-left transition-colors duration-300 group-data-[active=true]:border-white/25 group-data-[active=true]:bg-black/35 group-data-[active=true]:backdrop-blur-[2px]">
+          <span class="flex items-center gap-x-[7px]">
+            <svg viewBox="0 0 24 24" class="size-[15px] shrink-0 text-white opacity-0 scale-75 transition-all duration-200 group-data-[active=true]:opacity-100 group-data-[active=true]:scale-100" fill="none" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="block text-[17px] italic text-white/90 transition-colors duration-300 group-data-[active=true]:text-white [font-family:'Playfair_Display',serif]">Kawah Ijen</span>
+          </span>
+          <span class="mt-[3px] block text-[14px] text-white/70 transition-colors duration-300 group-data-[active=true]:text-white/90">Banyuwangi, Jawa Timur</span>
+        </span>
+      </li>
+      <li data-item role="button" tabindex="0" data-active="true" aria-pressed="true" data-bg="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Tumpak_sewu_waterfall.jpg/1920px-Tumpak_sewu_waterfall.jpg" data-title="Tirai Air Tumpak Sewu" data-desc="Ratusan aliran air jatuh berderet dari tebing setinggi 120 meter, membentuk tirai air terjun terindah di Jawa Timur. Jelajahi dari kaki gunung sampai dasar kolamnya." class="group absolute left-[108px] top-[35.1svh] size-[18svh] cursor-pointer rounded-full focus-visible:ring-2 focus-visible:ring-white">
+        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Tumpak_sewu_waterfall.jpg/960px-Tumpak_sewu_waterfall.jpg" alt="Air terjun Tumpak Sewu, Lumajang" class="size-full rounded-full object-cover transition-[transform,box-shadow] duration-300 group-hover:scale-105 group-data-[active=true]:ring-2 group-data-[active=true]:ring-white/70 group-data-[active=true]:shadow-[0_0_28px_rgba(255,255,255,0.22),0_10px_18px_rgba(0,0,0,0.45)]">
+        <span class="absolute right-[calc(100%+9px)] top-1/2 w-max -translate-y-1/2 rounded-2xl border border-white/0 bg-white/0 px-[12px] py-[7px] text-left transition-colors duration-300 group-data-[active=true]:border-white/25 group-data-[active=true]:bg-black/35 group-data-[active=true]:backdrop-blur-[2px]">
+          <span class="flex items-center gap-x-[7px]">
+            <svg viewBox="0 0 24 24" class="size-[15px] shrink-0 text-white opacity-0 scale-75 transition-all duration-200 group-data-[active=true]:opacity-100 group-data-[active=true]:scale-100" fill="none" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="block text-[17px] italic text-white/90 transition-colors duration-300 group-data-[active=true]:text-white [font-family:'Playfair_Display',serif]">Tumpak Sewu</span>
+          </span>
+          <span class="mt-[3px] block text-[14px] text-white/70 transition-colors duration-300 group-data-[active=true]:text-white/90">Lumajang, Jawa Timur</span>
+        </span>
+      </li>
+      <li data-item role="button" tabindex="0" data-active="false" aria-pressed="false" data-bg="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Mengudara_di_pantai_Papuma.jpg/1920px-Mengudara_di_pantai_Papuma.jpg" data-title="Teluk Terbuka Papuma" data-desc="Pasir putih berdampingan dengan karang tua di sepanjang teluk. Salah satu titik terbaik di pesisir selatan Jember untuk menyambut matahari terbit." class="group absolute left-[86px] top-[55.7svh] size-[15.5svh] cursor-pointer rounded-full focus-visible:ring-2 focus-visible:ring-white">
+        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Mengudara_di_pantai_Papuma.jpg/960px-Mengudara_di_pantai_Papuma.jpg" alt="Teluk Pantai Papuma dari udara, Jember" class="size-full rounded-full object-cover transition-[transform,box-shadow] duration-300 group-hover:scale-105 group-data-[active=true]:ring-2 group-data-[active=true]:ring-white/70 group-data-[active=true]:shadow-[0_0_28px_rgba(255,255,255,0.22),0_10px_18px_rgba(0,0,0,0.45)]">
+        <span class="absolute right-[calc(100%+9px)] top-1/2 w-max -translate-y-1/2 rounded-2xl border border-white/0 bg-white/0 px-[12px] py-[7px] text-left transition-colors duration-300 group-data-[active=true]:border-white/25 group-data-[active=true]:bg-black/35 group-data-[active=true]:backdrop-blur-[2px]">
+          <span class="flex items-center gap-x-[7px]">
+            <svg viewBox="0 0 24 24" class="size-[15px] shrink-0 text-white opacity-0 scale-75 transition-all duration-200 group-data-[active=true]:opacity-100 group-data-[active=true]:scale-100" fill="none" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="block text-[17px] italic text-white/90 transition-colors duration-300 group-data-[active=true]:text-white [font-family:'Playfair_Display',serif]">Pantai Papuma</span>
+          </span>
+          <span class="mt-[3px] block text-[14px] text-white/70 transition-colors duration-300 group-data-[active=true]:text-white/90">Jember, Jawa Timur</span>
+        </span>
+      </li>
+      <li data-item role="button" tabindex="0" data-active="false" aria-pressed="false" data-bg="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Sempu_Island.jpg/1920px-Sempu_Island.jpg" data-title="Laguna Tersembunyi Sempu" data-desc="Menyeberang 30 menit dari Sendang Biru menuju pulau karst kecil dengan laguna air tenang berwarna gradasi biru di tepi Samudra Hindia." class="group absolute left-0 top-[70.3svh] size-[14.5svh] cursor-pointer rounded-full focus-visible:ring-2 focus-visible:ring-white">
+        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Sempu_Island.jpg/960px-Sempu_Island.jpg" alt="Laguna Pulau Sempu, Malang" class="size-full rounded-full object-cover transition-[transform,box-shadow] duration-300 group-hover:scale-105 group-data-[active=true]:ring-2 group-data-[active=true]:ring-white/70 group-data-[active=true]:shadow-[0_0_28px_rgba(255,255,255,0.22),0_10px_18px_rgba(0,0,0,0.45)]">
+        <span class="absolute right-[calc(100%+9px)] top-1/2 w-max -translate-y-1/2 rounded-2xl border border-white/0 bg-white/0 px-[12px] py-[7px] text-left transition-colors duration-300 group-data-[active=true]:border-white/25 group-data-[active=true]:bg-black/35 group-data-[active=true]:backdrop-blur-[2px]">
+          <span class="flex items-center gap-x-[7px]">
+            <svg viewBox="0 0 24 24" class="size-[15px] shrink-0 text-white opacity-0 scale-75 transition-all duration-200 group-data-[active=true]:opacity-100 group-data-[active=true]:scale-100" fill="none" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="block text-[17px] italic text-white/90 transition-colors duration-300 group-data-[active=true]:text-white [font-family:'Playfair_Display',serif]">Pulau Sempu</span>
+          </span>
+          <span class="mt-[3px] block text-[14px] text-white/70 transition-colors duration-300 group-data-[active=true]:text-white/90">Malang, Jawa Timur</span>
+        </span>
+      </li>
+    </ul>
+    <div data-ui="pagination" role="group" aria-label="Pilih destinasi unggulan" class="absolute right-[24px] top-[51.9%] flex -translate-y-1/2 flex-col gap-y-[7px]">
+      <button type="button" data-dot data-active="false" aria-pressed="false" aria-label="Tampilkan Gunung Bromo" class="group flex size-[15px] cursor-pointer items-center justify-center rounded-full focus-visible:ring-2 focus-visible:ring-white">
+        <span class="size-[6px] rounded-full bg-white/50 transition-all group-data-[active=true]:size-[10px] group-data-[active=true]:bg-white"></span>
+      </button>
+      <button type="button" data-dot data-active="false" aria-pressed="false" aria-label="Tampilkan Kawah Ijen" class="group flex size-[15px] cursor-pointer items-center justify-center rounded-full focus-visible:ring-2 focus-visible:ring-white">
+        <span class="size-[6px] rounded-full bg-white/50 transition-all group-data-[active=true]:size-[10px] group-data-[active=true]:bg-white"></span>
+      </button>
+      <button type="button" data-dot data-active="true" aria-pressed="true" aria-label="Tampilkan Tumpak Sewu" class="group flex size-[15px] cursor-pointer items-center justify-center rounded-full focus-visible:ring-2 focus-visible:ring-white">
+        <span class="size-[6px] rounded-full bg-white/50 transition-all group-data-[active=true]:size-[10px] group-data-[active=true]:bg-white"></span>
+      </button>
+      <button type="button" data-dot data-active="false" aria-pressed="false" aria-label="Tampilkan Pantai Papuma" class="group flex size-[15px] cursor-pointer items-center justify-center rounded-full focus-visible:ring-2 focus-visible:ring-white">
+        <span class="size-[6px] rounded-full bg-white/50 transition-all group-data-[active=true]:size-[10px] group-data-[active=true]:bg-white"></span>
+      </button>
+      <button type="button" data-dot data-active="false" aria-pressed="false" aria-label="Tampilkan Pulau Sempu" class="group flex size-[15px] cursor-pointer items-center justify-center rounded-full focus-visible:ring-2 focus-visible:ring-white">
+        <span class="size-[6px] rounded-full bg-white/50 transition-all group-data-[active=true]:size-[10px] group-data-[active=true]:bg-white"></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Destinasi. Foto: Wikimedia Commons (Bromo: Gunung Bromo sunrise; Ijen: Kawah Ijen acid lake; Tumpak Sewu: waterfall; Papuma: aerial bay; Sempu: Sempu Island), lisensi CC BY / CC BY-SA -->
+<section id="destinasi" data-ui="destinasi-section" aria-labelledby="destinasi-title" class="scroll-mt-[100px] px-[29px] pb-[88px] pt-[84px] sm:px-[52px] sm:pb-[112px] sm:pt-[104px]">
+  <div class="mx-auto w-full max-w-[1200px]">
+    <header data-ui="section-header" class="max-w-[720px]">
+      <div data-ui="badge" class="inline-flex items-center gap-x-[10px] rounded-full border border-white/25 bg-black/30 py-[5px] pl-[5px] pr-[18px] backdrop-blur-[3px]">
+        <span class="rounded-full bg-neutral-950 px-[14px] py-[8px] text-[14px] font-medium text-white">5 Destinasi</span>
+        <span class="text-[15px] text-white/95">Jelajah Jawa Timur</span>
+      </div>
+      <h2 id="destinasi-title" class="mt-[18px] text-[30px] font-medium italic leading-[1.08] text-white sm:text-[38px] [font-family:'Playfair_Display',serif]">Dari Gunung ke Lautan</h2>
+      <p class="mt-[12px] max-w-[560px] text-[14px] leading-[22px] text-white/90 sm:text-[16px] sm:leading-[26px]">Kabut Bromo, api biru Ijen, tirai Tumpak Sewu, teluk Papuma, dan laguna Sempu. Mulai dari kabut, tutup di laguna.</p>
+    </header>
+
+    <div data-ui="bento-grid" class="mt-[30px] grid auto-rows-[220px] grid-cols-1 gap-[12px] sm:auto-rows-[240px] sm:grid-cols-2 lg:auto-rows-[280px] lg:grid-cols-4">
+
+      <figure data-ui="destination-tile" class="group relative overflow-hidden rounded-3xl sm:col-span-2 lg:row-span-2">
+        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Tumpak_sewu_waterfall.jpg/1920px-Tumpak_sewu_waterfall.jpg" alt="Air terjun Tumpak Sewu, Lumajang" class="absolute inset-0 h-full w-full object-cover saturate-[0.8] transition-transform duration-500 group-hover:scale-[1.03]">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-black/5"></div>
+        <figcaption class="absolute inset-x-0 bottom-0 p-[12px] sm:p-[14px]">
+          <div class="rounded-2xl border border-white/25 bg-black/35 px-[16px] py-[13px] backdrop-blur-[2px]">
+            <h3 class="text-[22px] font-medium italic leading-[1.12] text-white sm:text-[26px] [font-family:'Playfair_Display',serif]">Tumpak Sewu</h3>
+            <p class="mt-[2px] text-[13px] text-white/70">Lumajang, Jawa Timur</p>
+            <p class="mt-[9px] max-w-[420px] text-[13px] leading-[19px] text-white/90">Ratusan aliran air jatuh berderet dari tebing setinggi 120 meter, membentuk tirai air terjun terindah di Jawa Timur. Jelajahi dari kaki gunung sampai dasar kolamnya.</p>
+          </div>
+        </figcaption>
+      </figure>
+
+      <figure data-ui="destination-tile" class="group relative overflow-hidden rounded-3xl">
+        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Gunung_Bromo_sunrise_-_Indonesia.jpg/1280px-Gunung_Bromo_sunrise_-_Indonesia.jpg" alt="Kabut pagi di Gunung Bromo, Probolinggo" class="absolute inset-0 h-full w-full object-cover saturate-[0.8] transition-transform duration-500 group-hover:scale-[1.03]">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-black/5"></div>
+        <figcaption class="absolute inset-x-0 bottom-0 p-[12px] sm:p-[14px]">
+          <div class="rounded-2xl border border-white/25 bg-black/35 px-[14px] py-[11px] backdrop-blur-[2px]">
+            <h3 class="text-[19px] font-medium italic leading-[1.15] text-white [font-family:'Playfair_Display',serif]">Gunung Bromo</h3>
+            <p class="mt-[2px] text-[13px] text-white/70">Probolinggo, Jawa Timur</p>
+            <p class="mt-[6px] text-[12px] leading-[17px] text-white/90 line-clamp-2">Berangkat sebelum subuh ke Penanjakan untuk menyaksikan matahari terbit di atas lautan pasir, lalu turun menyusuri kawah aktif yang masih berasap.</p>
+          </div>
+        </figcaption>
+      </figure>
+
+      <figure data-ui="destination-tile" class="group relative overflow-hidden rounded-3xl">
+        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Kawah-Ijen_Indonesia_Acidious-Lake-at_the-floor-of-the-crater-01.jpg/1280px-Kawah-Ijen_Indonesia_Acidious-Lake-at_the-floor-of-the-crater-01.jpg" alt="Danau kawah Kawah Ijen, Banyuwangi" class="absolute inset-0 h-full w-full object-cover saturate-[0.8] transition-transform duration-500 group-hover:scale-[1.03]">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-black/5"></div>
+        <figcaption class="absolute inset-x-0 bottom-0 p-[12px] sm:p-[14px]">
+          <div class="rounded-2xl border border-white/25 bg-black/35 px-[14px] py-[11px] backdrop-blur-[2px]">
+            <h3 class="text-[19px] font-medium italic leading-[1.15] text-white [font-family:'Playfair_Display',serif]">Kawah Ijen</h3>
+            <p class="mt-[2px] text-[13px] text-white/70">Banyuwangi, Jawa Timur</p>
+            <p class="mt-[6px] text-[12px] leading-[17px] text-white/90 line-clamp-2">Naik puncak Ijen tengah malam untuk menyaksikan api biru yang langka, lalu berdiri di tepi danau kawah asam terbesar di dunia yang berwarna tosaca menyala.</p>
+          </div>
+        </figcaption>
+      </figure>
+
+      <figure data-ui="destination-tile" class="group relative overflow-hidden rounded-3xl">
+        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Mengudara_di_pantai_Papuma.jpg/1280px-Mengudara_di_pantai_Papuma.jpg" alt="Teluk Pantai Papuma dari udara, Jember" class="absolute inset-0 h-full w-full object-cover saturate-[0.8] transition-transform duration-500 group-hover:scale-[1.03]">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-black/5"></div>
+        <figcaption class="absolute inset-x-0 bottom-0 p-[12px] sm:p-[14px]">
+          <div class="rounded-2xl border border-white/25 bg-black/35 px-[14px] py-[11px] backdrop-blur-[2px]">
+            <h3 class="text-[19px] font-medium italic leading-[1.15] text-white [font-family:'Playfair_Display',serif]">Pantai Papuma</h3>
+            <p class="mt-[2px] text-[13px] text-white/70">Jember, Jawa Timur</p>
+            <p class="mt-[6px] text-[12px] leading-[17px] text-white/90 line-clamp-2">Pasir putih berdampingan dengan karang tua di sepanjang teluk. Salah satu titik terbaik di pesisir selatan Jember untuk menyambut matahari terbit.</p>
+          </div>
+        </figcaption>
+      </figure>
+
+      <figure data-ui="destination-tile" class="group relative overflow-hidden rounded-3xl">
+        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Sempu_Island.jpg/1280px-Sempu_Island.jpg" alt="Laguna Pulau Sempu, Malang" class="absolute inset-0 h-full w-full object-cover saturate-[0.8] transition-transform duration-500 group-hover:scale-[1.03]">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-black/5"></div>
+        <figcaption class="absolute inset-x-0 bottom-0 p-[12px] sm:p-[14px]">
+          <div class="rounded-2xl border border-white/25 bg-black/35 px-[14px] py-[11px] backdrop-blur-[2px]">
+            <h3 class="text-[19px] font-medium italic leading-[1.15] text-white [font-family:'Playfair_Display',serif]">Pulau Sempu</h3>
+            <p class="mt-[2px] text-[13px] text-white/70">Malang, Jawa Timur</p>
+            <p class="mt-[6px] text-[12px] leading-[17px] text-white/90 line-clamp-2">Menyeberang 30 menit dari Sendang Biru menuju pulau karst kecil dengan laguna air tenang berwarna gradasi biru di tepi Samudra Hindia.</p>
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- Paket Wisata. Foto: Wikimedia Commons (Bromo: Gunung Bromo sunrise; Ijen: Kawah Ijen acid lake; Tumpak Sewu: waterfall), lisensi CC BY / CC BY-SA -->
+<section id="paket" data-ui="paket-section" aria-labelledby="paket-title" class="scroll-mt-[100px] px-[29px] pb-[88px] sm:px-[52px] sm:pb-[112px]">
+  <div class="mx-auto w-full max-w-[1200px]">
+    <header data-ui="section-header" class="max-w-[720px]">
+      <div data-ui="badge" class="inline-flex items-center gap-x-[10px] rounded-full border border-white/25 bg-black/30 py-[5px] pl-[5px] pr-[18px] backdrop-blur-[3px]">
+        <span class="rounded-full bg-neutral-950 px-[14px] py-[8px] text-[14px] font-medium text-white">3 Paket</span>
+        <span class="text-[15px] text-white/95">Jelajah Jawa Timur</span>
+      </div>
+      <h2 id="paket-title" class="mt-[18px] text-[30px] font-medium italic leading-[1.08] text-white sm:text-[38px] [font-family:'Playfair_Display',serif]">Pilih Tempo Liburanmu</h2>
+      <p class="mt-[12px] max-w-[560px] text-[14px] leading-[22px] text-white/90 sm:text-[16px] sm:leading-[26px]">Tiga tempo pilihan: satu malam untuk Bromo, dua untuk Ijen dan Tumpak Sewu. Semuanya sudah termasuk transport, tiket, dan guide lokal.</p>
+    </header>
+
+    <div data-ui="package-grid" class="mt-[30px] grid grid-cols-1 gap-[12px] sm:grid-cols-2 lg:grid-cols-3">
+
+      <article data-ui="package-card" class="group flex flex-col overflow-hidden rounded-3xl bg-neutral-900">
+        <div class="relative h-[300px] w-full shrink-0 overflow-hidden">
+          <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Gunung_Bromo_sunrise_-_Indonesia.jpg/960px-Gunung_Bromo_sunrise_-_Indonesia.jpg" alt="Kabut pagi di Gunung Bromo, Probolinggo" class="absolute inset-0 h-full w-full object-cover saturate-[0.8] transition-transform duration-500 group-hover:scale-[1.03]">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-black/5"></div>
+          <div class="absolute left-0 top-0 flex flex-wrap gap-x-[8px] gap-y-[6px] p-[12px]">
+            <span class="rounded-full border border-white/20 bg-white/10 px-[10px] py-[3px] text-[11px] leading-[15px] text-white/85 backdrop-blur-[2px]">1D1N</span>
+            <span class="rounded-full border border-white/20 bg-white/10 px-[10px] py-[3px] text-[11px] leading-[15px] text-white/85 backdrop-blur-[2px]">Pemula</span>
+          </div>
+        </div>
+        <div class="flex grow flex-col p-[18px] pt-[16px]">
+          <div class="rounded-2xl border border-white/25 bg-black/35 px-[14px] py-[11px] backdrop-blur-[2px]">
+            <h3 class="text-[19px] font-medium italic leading-[1.15] text-white [font-family:'Playfair_Display',serif]">Paket Bromo Sunrise</h3>
+            <p class="mt-[2px] text-[13px] text-white/70">Probolinggo, Jawa Timur</p>
+          </div>
+          <p class="mt-[12px] text-[13px] leading-[19px] text-white/90">Berangkat tengah malam dari Surabaya atau Malang, lalu menikmati matahari terbit dari Penanjakan sebelum turun ke kawah berasap.</p>
+          <ul class="mt-[12px] flex flex-col gap-y-[7px]">
+            <li class="flex items-center gap-x-[8px]"><svg viewBox="0 0 24 24" class="size-[14px] shrink-0 text-white/85" fill="none" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="text-[13px] leading-[18px] text-white/85">Transport AC + 1 malam lodge</span></li>
+            <li class="flex items-center gap-x-[8px]"><svg viewBox="0 0 24 24" class="size-[14px] shrink-0 text-white/85" fill="none" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="text-[13px] leading-[18px] text-white/85">Jeep 4WD ke Penanjakan &amp; lautan pasir</span></li>
+            <li class="flex items-center gap-x-[8px]"><svg viewBox="0 0 24 24" class="size-[14px] shrink-0 text-white/85" fill="none" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="text-[13px] leading-[18px] text-white/85">Tiket masuk kawasan Bromo</span></li>
+            <li class="flex items-center gap-x-[8px]"><svg viewBox="0 0 24 24" class="size-[14px] shrink-0 text-white/85" fill="none" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="text-[13px] leading-[18px] text-white/85">Guide lokal + makan ringan</span></li>
+          </ul>
+          <div class="mt-auto flex items-end justify-between gap-x-[12px] pt-[16px]">
+            <p class="text-[11px] leading-[15px] text-white/60">mulai dari<br><span class="text-[18px] font-medium text-white">Rp 850.000</span> <span class="text-[11px] text-white/60">/ pribadi</span></p>
+            <a href="#kontak" class="inline-flex shrink-0 items-center gap-x-[8px] rounded-full border border-white/20 bg-white/15 py-[9px] pl-[18px] pr-[16px] text-[13px] leading-[17px] font-medium text-white backdrop-blur-[3px] transition-colors hover:bg-white/25 focus-visible:ring-2 focus-visible:ring-white">
+              Tanya Itinerary
+              <svg viewBox="0 0 24 24" class="size-[13px]" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article data-ui="package-card" class="group flex flex-col overflow-hidden rounded-3xl bg-neutral-900">
+        <div class="relative h-[300px] w-full shrink-0 overflow-hidden">
+          <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Kawah-Ijen_Indonesia_Acidious-Lake-at_the-floor-of-the-crater-01.jpg/960px-Kawah-Ijen_Indonesia_Acidious-Lake-at_the-floor-of-the-crater-01.jpg" alt="Danau kawah Kawah Ijen, Banyuwangi" class="absolute inset-0 h-full w-full object-cover saturate-[0.8] transition-transform duration-500 group-hover:scale-[1.03]">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-black/5"></div>
+          <div class="absolute left-0 top-0 flex flex-wrap gap-x-[8px] gap-y-[6px] p-[12px]">
+            <span class="rounded-full border border-white/20 bg-white/10 px-[10px] py-[3px] text-[11px] leading-[15px] text-white/85 backdrop-blur-[2px]">2D1N</span>
+            <span class="rounded-full border border-white/20 bg-white/10 px-[10px] py-[3px] text-[11px] leading-[15px] text-white/85 backdrop-blur-[2px]">Menengah</span>
+          </div>
+        </div>
+        <div class="flex grow flex-col p-[18px] pt-[16px]">
+          <div class="rounded-2xl border border-white/25 bg-black/35 px-[14px] py-[11px] backdrop-blur-[2px]">
+            <h3 class="text-[19px] font-medium italic leading-[1.15] text-white [font-family:'Playfair_Display',serif]">Paket Api Biru Ijen</h3>
+            <p class="mt-[2px] text-[13px] text-white/70">Banyuwangi, Jawa Timur</p>
+          </div>
+          <p class="mt-[12px] text-[13px] leading-[19px] text-white/90">Trek tengah malam ±2 jam menuju puncak kawah untuk api biru, dilanjutkan ke tepi danau asam terbesar di dunia.</p>
+          <ul class="mt-[12px] flex flex-col gap-y-[7px]">
+            <li class="flex items-center gap-x-[8px]"><svg viewBox="0 0 24 24" class="size-[14px] shrink-0 text-white/85" fill="none" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="text-[13px] leading-[18px] text-white/85">Transport AC + 1 malam guesthouse</span></li>
+            <li class="flex items-center gap-x-[8px]"><svg viewBox="0 0 24 24" class="size-[14px] shrink-0 text-white/85" fill="none" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="text-[13px] leading-[18px] text-white/85">Ojek trek puncak + masker asam</span></li>
+            <li class="flex items-center gap-x-[8px]"><svg viewBox="0 0 24 24" class="size-[14px] shrink-0 text-white/85" fill="none" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="text-[13px] leading-[18px] text-white/85">Tiket masuk kawasan Ijen</span></li>
+            <li class="flex items-center gap-x-[8px]"><svg viewBox="0 0 24 24" class="size-[14px] shrink-0 text-white/85" fill="none" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="text-[13px] leading-[18px] text-white/85">Guide berlisensi + sarapan</span></li>
+          </ul>
+          <div class="mt-auto flex items-end justify-between gap-x-[12px] pt-[16px]">
+            <p class="text-[11px] leading-[15px] text-white/60">mulai dari<br><span class="text-[18px] font-medium text-white">Rp 1.250.000</span> <span class="text-[11px] text-white/60">/ pribadi</span></p>
+            <a href="#kontak" class="inline-flex shrink-0 items-center gap-x-[8px] rounded-full border border-white/20 bg-white/15 py-[9px] pl-[18px] pr-[16px] text-[13px] leading-[17px] font-medium text-white backdrop-blur-[3px] transition-colors hover:bg-white/25 focus-visible:ring-2 focus-visible:ring-white">
+              Tanya Itinerary
+              <svg viewBox="0 0 24 24" class="size-[13px]" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article data-ui="package-card" class="group flex flex-col overflow-hidden rounded-3xl bg-neutral-900">
+        <div class="relative h-[300px] w-full shrink-0 overflow-hidden">
+          <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Tumpak_sewu_waterfall.jpg/960px-Tumpak_sewu_waterfall.jpg" alt="Air terjun Tumpak Sewu, Lumajang" class="absolute inset-0 h-full w-full object-cover saturate-[0.8] transition-transform duration-500 group-hover:scale-[1.03]">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-black/5"></div>
+          <div class="absolute left-0 top-0 flex flex-wrap gap-x-[8px] gap-y-[6px] p-[12px]">
+            <span class="rounded-full border border-white/20 bg-white/10 px-[10px] py-[3px] text-[11px] leading-[15px] text-white/85 backdrop-blur-[2px]">2D1N</span>
+            <span class="rounded-full border border-white/20 bg-white/10 px-[10px] py-[3px] text-[11px] leading-[15px] text-white/85 backdrop-blur-[2px]">Tangguh</span>
+          </div>
+        </div>
+        <div class="flex grow flex-col p-[18px] pt-[16px]">
+          <div class="rounded-2xl border border-white/25 bg-black/35 px-[14px] py-[11px] backdrop-blur-[2px]">
+            <h3 class="text-[19px] font-medium italic leading-[1.15] text-white [font-family:'Playfair_Display',serif]">Paket Tumpak Sewu</h3>
+            <p class="mt-[2px] text-[13px] text-white/70">Lumajang, Jawa Timur</p>
+          </div>
+          <p class="mt-[12px] text-[13px] leading-[19px] text-white/90">Panorama air terjun dari kaki gunung, lalu turun lewat tangga besi ke dasar kolam untuk dua sudut terbaik.</p>
+          <ul class="mt-[12px] flex flex-col gap-y-[7px]">
+            <li class="flex items-center gap-x-[8px]"><svg viewBox="0 0 24 24" class="size-[14px] shrink-0 text-white/85" fill="none" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="text-[13px] leading-[18px] text-white/85">Transport AC + 1 malam homestay</span></li>
+            <li class="flex items-center gap-x-[8px]"><svg viewBox="0 0 24 24" class="size-[14px] shrink-0 text-white/85" fill="none" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="text-[13px] leading-[18px] text-white/85">Panorama bukit + trek dasar kolam</span></li>
+            <li class="flex items-center gap-x-[8px]"><svg viewBox="0 0 24 24" class="size-[14px] shrink-0 text-white/85" fill="none" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="text-[13px] leading-[18px] text-white/85">Tiket masuk + helm &amp; guide lokal</span></li>
+            <li class="flex items-center gap-x-[8px]"><svg viewBox="0 0 24 24" class="size-[14px] shrink-0 text-white/85" fill="none" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="text-[13px] leading-[18px] text-white/85">Sarapan + air mineral</span></li>
+          </ul>
+          <div class="mt-auto flex items-end justify-between gap-x-[12px] pt-[16px]">
+            <p class="text-[11px] leading-[15px] text-white/60">mulai dari<br><span class="text-[18px] font-medium text-white">Rp 1.450.000</span> <span class="text-[11px] text-white/60">/ pribadi</span></p>
+            <a href="#kontak" class="inline-flex shrink-0 items-center gap-x-[8px] rounded-full border border-white/20 bg-white/15 py-[9px] pl-[18px] pr-[16px] text-[13px] leading-[17px] font-medium text-white backdrop-blur-[3px] transition-colors hover:bg-white/25 focus-visible:ring-2 focus-visible:ring-white">
+              Tanya Itinerary
+              <svg viewBox="0 0 24 24" class="size-[13px]" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Tentang Kami. Foto: Wikimedia Commons (Sunrise Ranu Kumbolo/ Semeru), lisensi CC BY / CC BY-SA -->
+<section id="tentang" data-ui="tentang-section" aria-labelledby="tentang-title" class="scroll-mt-[100px] px-[29px] pb-[88px] sm:px-[52px] sm:pb-[112px]">
+  <div class="mx-auto grid w-full max-w-[1200px] items-center gap-[36px] lg:grid-cols-[1fr_440px]">
+    <div>
+      <header data-ui="section-header">
+        <div data-ui="badge" class="inline-flex items-center gap-x-[10px] rounded-full border border-white/25 bg-black/30 py-[5px] pl-[5px] pr-[18px] backdrop-blur-[3px]">
+          <span class="rounded-full bg-neutral-950 px-[14px] py-[8px] text-[14px] font-medium text-white">Tentang Kami</span>
+          <span class="text-[15px] text-white/95">Jelajah Jawa Timur</span>
+        </div>
+        <h2 id="tentang-title" class="mt-[18px] text-[30px] font-medium italic leading-[1.08] text-white sm:text-[38px] [font-family:'Playfair_Display',serif]">Kami Kenal Jalurnya</h2>
+        <p class="mt-[12px] max-w-[560px] text-[14px] leading-[22px] text-white/90 sm:text-[16px] sm:leading-[26px]">Jelajah Jawa Timur lahir dari kebiasaan keliling destinasi ini bareng guide lokal. Jalurnya kami uji sendiri, satu-satu.</p>
+      </header>
+      <p class="mt-[16px] max-w-[560px] text-[14px] leading-[22px] text-white/90 sm:text-[15px] sm:leading-[24px]">Setiap guide kami temui langsung di jalurnya, dan detail paket di halaman ini ditulis dari pengalaman itu, bukan dari katalog.</p>
+      <div data-ui="stats" class="mt-[26px] flex flex-wrap gap-x-[36px] gap-y-[14px]">
+        <div>
+          <p class="text-[26px] font-medium tracking-[-0.01em] text-white">5</p>
+          <p class="mt-[2px] text-[12px] text-white/70">destinasi pilihan</p>
+        </div>
+        <div>
+          <p class="text-[26px] font-medium tracking-[-0.01em] text-white">3</p>
+          <p class="mt-[2px] text-[12px] text-white/70">paket siap jalan</p>
+        </div>
+        <div>
+          <p class="text-[26px] font-medium tracking-[-0.01em] text-white">24 jam</p>
+          <p class="mt-[2px] text-[12px] text-white/70">batas waktu balasan</p>
+        </div>
+      </div>
+    </div>
+    <figure data-ui="destination-tile" class="group relative h-[300px] overflow-hidden rounded-3xl sm:h-[380px] lg:h-[480px]">
+      <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Sunrise_Ranu_Kumbolo_semeru.jpg/1280px-Sunrise_Ranu_Kumbolo_semeru.jpg" alt="Matahari terbit di Ranu Kumbolo, lereng Semeru" class="absolute inset-0 h-full w-full object-cover saturate-[0.8] transition-transform duration-500 group-hover:scale-[1.03]">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-black/5"></div>
+      <figcaption class="absolute inset-x-0 bottom-0 p-[12px] sm:p-[14px]">
+        <div class="rounded-2xl border border-white/25 bg-black/35 px-[14px] py-[11px] backdrop-blur-[2px]">
+          <h3 class="text-[19px] font-medium italic leading-[1.15] text-white [font-family:'Playfair_Display',serif]">Ranu Kumbolo</h3>
+          <p class="mt-[2px] text-[13px] text-white/70">Basis kami di lereng Semeru</p>
+        </div>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- Kontak -->
+<section id="kontak" data-ui="kontak-section" aria-labelledby="kontak-title" class="scroll-mt-[100px] px-[29px] pb-[88px] sm:px-[52px] sm:pb-[112px]">
+  <div class="mx-auto grid w-full max-w-[1200px] items-start gap-[36px] lg:grid-cols-[1fr_480px]">
+    <div>
+      <header data-ui="section-header">
+        <div data-ui="badge" class="inline-flex items-center gap-x-[10px] rounded-full border border-white/25 bg-black/30 py-[5px] pl-[5px] pr-[18px] backdrop-blur-[3px]">
+          <span class="rounded-full bg-neutral-950 px-[14px] py-[8px] text-[14px] font-medium text-white">Kontak</span>
+          <span class="text-[15px] text-white/95">Jelajah Jawa Timur</span>
+        </div>
+        <h2 id="kontak-title" class="mt-[18px] text-[30px] font-medium italic leading-[1.08] text-white sm:text-[38px] [font-family:'Playfair_Display',serif]">Mulai Rencanamu di Sini</h2>
+        <p class="mt-[12px] max-w-[560px] text-[14px] leading-[22px] text-white/90 sm:text-[16px] sm:leading-[26px]">Ceritakan tempo liburanmu: destinasi fokus, jumlah orang, tanggal keberangkatan. Kami balas dengan itinerary lengkap dan harga final.</p>
+      </header>
+      <ul class="mt-[22px] flex flex-col gap-y-[10px]">
+        <li class="text-[13px] leading-[18px] text-white/85"><a href="mailto:halo@jelajahjawatimur.id" class="text-white transition-colors hover:text-white/80 focus-visible:ring-2 focus-visible:ring-white">halo@jelajahjawatimur.id</a> · balasan &lt; 1×24 jam</li>
+        <li class="text-[13px] leading-[18px] text-white/85">Basis kami: Malang, Jawa Timur</li>
+        <li class="text-[13px] leading-[18px] text-white/85">Rombongan dan request khusus bisa diakomodir</li>
+      </ul>
+    </div>
+    <!-- TODO: backend/email belum ada; submit disimulasikan dengan label "Terkirim" + reset form -->
+    <form id="kontak-form" data-ui="kontak-form" class="rounded-3xl bg-neutral-900 p-[20px] sm:p-[24px]">
+      <h3 class="text-[19px] font-medium italic leading-[1.15] text-white [font-family:'Playfair_Display',serif]">Formulir Rencana Liburan</h3>
+      <div class="mt-[16px] flex flex-col gap-y-[14px]">
+        <label class="block">
+          <span class="block text-[12px] text-white/70">Nama</span>
+          <input type="text" name="nama" required placeholder="Nama lengkap" class="mt-[6px] w-full rounded-2xl border border-white/20 bg-white/10 px-[14px] py-[10px] text-[13px] leading-[18px] text-white placeholder:text-white/70 outline-none focus:border-white/60 focus:ring-2 focus:ring-white/70 transition-colors">
+        </label>
+        <label class="block">
+          <span class="block text-[12px] text-white/70">Email</span>
+          <input type="email" name="email" required placeholder="nama@email.com" class="mt-[6px] w-full rounded-2xl border border-white/20 bg-white/10 px-[14px] py-[10px] text-[13px] leading-[18px] text-white placeholder:text-white/70 outline-none focus:border-white/60 focus:ring-2 focus:ring-white/70 transition-colors">
+        </label>
+        <label class="block">
+          <span class="block text-[12px] text-white/70">Pesan</span>
+          <textarea name="pesan" required rows="4" placeholder="Contoh: 4 orang, mid-Juni, Bromo + Tumpak Sewu…" class="mt-[6px] w-full resize-none rounded-2xl border border-white/20 bg-white/10 px-[14px] py-[10px] text-[13px] leading-[18px] text-white placeholder:text-white/70 outline-none focus:border-white/60 focus:ring-2 focus:ring-white/70 transition-colors"></textarea>
+        </label>
+      </div>
+      <div class="mt-[18px] flex items-center justify-between gap-x-[12px]">
+        <p class="text-[11px] leading-[15px] text-white/60">Data kamu hanya dipakai untuk membalas.</p>
+        <div aria-live="polite">
+          <button type="submit" data-submit class="inline-flex items-center gap-x-[10px] rounded-full border border-white/20 bg-white/15 py-[11px] pl-[22px] pr-[19px] text-[14px] leading-[18px] font-medium text-white backdrop-blur-[3px] transition-colors hover:bg-white/25 focus-visible:ring-2 focus-visible:ring-white disabled:opacity-70 disabled:hover:bg-white/15">
+            <span>Kirim Rencana</span>
+            <svg viewBox="0 0 24 24" class="size-[14px]" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer data-ui="footer" class="border-t border-white/10">
+  <div class="mx-auto flex w-full max-w-[1200px] flex-col gap-y-[26px] px-[29px] py-[40px] sm:flex-row sm:items-center sm:justify-between sm:px-[52px] sm:gap-x-[40px]">
+    <div>
+      <a href="#beranda" class="inline-flex items-center gap-x-[10px] rounded text-white focus-visible:ring-2 focus-visible:ring-white">
+        <svg viewBox="0 0 24 24" class="size-[26px]" aria-hidden="true" focusable="false">
+          <g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12.2 21V8.4C12.2 6.5 13.4 5.4 15.9 5.4"/>
+            <path d="M5.6 10.2H16.6"/>
+            <path d="M15.9 5.4L13.5 3.4M15.9 5.4L13.5 7.4"/>
+          </g>
+          <circle cx="12.2" cy="21" r="2.4" fill="currentColor"/>
+        </svg>
+        <span class="text-[19px] font-semibold [font-family:'Baloo_2',sans-serif]">Tur Palapa</span>
+      </a>
+      <p class="mt-[10px] max-w-[280px] text-[12px] leading-[18px] text-white/60">Perjalanan menuju sisi liar Jawa Timur, dirangkai oleh tim lokal.</p>
+    </div>
+    <nav aria-label="Navigasi footer" class="order-3 flex flex-wrap items-center gap-x-[22px] gap-y-[8px] text-[13px] sm:order-2">
+      <a href="#beranda" class="rounded text-white/80 transition-colors hover:text-white focus-visible:ring-2 focus-visible:ring-white">Beranda</a>
+      <a href="#destinasi" class="rounded text-white/80 transition-colors hover:text-white focus-visible:ring-2 focus-visible:ring-white">Destinasi</a>
+      <a href="#paket" class="rounded text-white/80 transition-colors hover:text-white focus-visible:ring-2 focus-visible:ring-white">Paket Wisata</a>
+      <a href="#tentang" class="rounded text-white/80 transition-colors hover:text-white focus-visible:ring-2 focus-visible:ring-white">Tentang Kami</a>
+      <a href="#kontak" class="rounded text-white/80 transition-colors hover:text-white focus-visible:ring-2 focus-visible:ring-white">Kontak</a>
+    </nav>
+    <div class="order-2 text-[11px] leading-[17px] text-white/50 sm:order-3 sm:text-right">
+      <p>© 2026 Jelajah Jawa Timur</p>
+      <p class="mt-[4px]">Foto: Wikimedia Commons (CC BY / CC BY-SA)</p>
+    </div>
+  </div>
+</footer>
+<script>
+  const heroBg = document.getElementById('hero-bg');
+  const heroTitle = document.getElementById('hero-title');
+  const heroDesc = document.getElementById('hero-desc');
+  const items = Array.from(document.querySelectorAll('[data-item]'));
+  const dots = Array.from(document.querySelectorAll('[data-dot]'));
+
+  function setActive(index) {
+    items.forEach((item, i) => {
+      item.setAttribute('data-active', String(i === index));
+      item.setAttribute('aria-pressed', String(i === index));
+    });
+    dots.forEach((dot, i) => {
+      dot.setAttribute('data-active', String(i === index));
+      dot.setAttribute('aria-pressed', String(i === index));
+    });
+    const { bg, title, desc } = items[index].dataset;
+    if (heroBg.src !== bg) {
+      heroBg.style.opacity = '0';
+      setTimeout(() => {
+        heroBg.src = bg;
+        heroBg.decode().catch(() => {}).then(() => {
+          heroBg.style.opacity = '1';
+        });
+      }, 300);
+    }
+    if (heroTitle.textContent !== title) {
+      heroTitle.style.opacity = '0';
+      heroDesc.style.opacity = '0';
+      setTimeout(() => {
+        heroTitle.textContent = title;
+        heroDesc.textContent = desc;
+        heroTitle.style.opacity = '1';
+        heroDesc.style.opacity = '1';
+      }, 300);
+    }
+  }
+
+  items.forEach((item, i) => {
+    item.addEventListener('click', () => setActive(i));
+    item.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        setActive(i);
+      }
+    });
+  });
+  dots.forEach((dot, i) => dot.addEventListener('click', () => setActive(i)));
+
+  const navLinks = Array.from(document.querySelectorAll('[data-ui="navbar"] nav a[href^="#"]'));
+  const watchSections = navLinks.map((link) => document.getElementById(link.getAttribute('href').slice(1)));
+
+  function syncNav() {
+    const mark = window.scrollY + 140;
+    let current = 0;
+    watchSections.forEach((section, i) => {
+      if (section && section.offsetTop <= mark) current = i;
+    });
+    navLinks.forEach((link, i) => {
+      if (i === current) {
+        link.setAttribute('aria-current', 'page');
+      } else {
+        link.removeAttribute('aria-current');
+      }
+    });
+  }
+
+  syncNav();
+  window.addEventListener('scroll', syncNav, { passive: true });
+
+  const kontakForm = document.getElementById('kontak-form');
+  if (kontakForm) {
+    kontakForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const btn = kontakForm.querySelector('[data-submit]');
+      const label = btn.querySelector('span');
+      label.textContent = 'Terkirim. Kami balas via email';
+      btn.disabled = true;
+      setTimeout(() => {
+        label.textContent = 'Kirim Rencana';
+        btn.disabled = false;
+        kontakForm.reset();
+      }, 4000);
+    });
+  }
+</script>
+</body>
+</html>
